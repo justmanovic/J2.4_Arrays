@@ -51,3 +51,7 @@ puts "Il y a #{compteur_up} éléments qui commencent par une majuscule"
 puts journalists.length
 
 print journalists.sort
+print "-------------"
+# journalists = journalists.sort
+# print journalists
+
