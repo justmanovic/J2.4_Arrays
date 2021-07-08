@@ -148,11 +148,11 @@ journalists_length_sorted = journalists_length.sort # On trie la liste qui conti
 occurences = [] # On crée un tableau qui va contenir le nb d'occurences de chaque length
 
 journalists_length_sorted.each do |el| 
- occurences.push "#{el} apparait #{journalists_length_sorted.count(el)} fois, soit #{journalists_length_sorted.count(el)*100.00/journalists_length_sorted.length}% des fois"
+ occurences.push "#{el} apparait #{journalists_length_sorted.count(el)} fois, soit #{(journalists_length_sorted.count(el)*100.00/journalists_length_sorted.length).round(2)}% des fois"
 end
 
 
-puts occurences
+puts occurences.uniq
 
     # tab_compteur.push()
 
