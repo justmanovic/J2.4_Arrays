@@ -77,3 +77,56 @@ puts "la position de @epenser est #{journalists.index("@epenser")}"
 
 
 puts "---------------------------------------------------------"
+
+
+
+# compteur_4 =0
+# compteur_5 =0
+# compteur_6 =0
+# compteur_7 =0
+# compteur_8 =0
+# compteur_9 =0
+# compteur_10 =0
+# compteur_11 =0
+# compteur_12 =0
+# compteur_13 =0
+
+
+puts journalists_length.max
+
+tab_compteur = Array.new
+tab_compteur.push(0)
+
+print tab_compteur
+
+journalists_length.each do |el|
+    if tab_compteur.length > el
+        tab_compteur[el] = tab_compteur[el] + 1
+        puts ""
+        print tab_compteur
+    else
+        while   tab_compteur.length <= el
+            tab_compteur.push(0)
+        end
+        puts ""
+        print tab_compteur
+        tab_compteur[el] = tab_compteur[el] + 1
+        puts ""
+        print tab_compteur
+        sleep(0.5)
+    end
+end
+
+print
+
+    # tab_compteur.push()
+
+i=0
+
+puts ""
+while i<tab_compteur.length
+    if(tab_compteur[i]!=0)
+    puts "il y a #{tab_compteur[i]} handles de #{i} caractères, soit #{tab_compteur[i] /journalists_length.length.to_f * 100.00}%"
+    end
+    i+=1
+end
