@@ -18,7 +18,6 @@ journalists.each do |element|
     end
     if element.length == min
       handle_min = element
-      # puts "le handle min est #{handle_min} "
     end
 end
 puts "Le handle le plus court mesure #{min} caractères"
@@ -79,43 +78,41 @@ puts "la position de @epenser est #{journalists.index("@epenser")}"
 puts "---------------------------------------------------------"
 
 
+# METHODE 1
 
-# compteur_4 =0
-# compteur_5 =0
-# compteur_6 =0
-# compteur_7 =0
-# compteur_8 =0
-# compteur_9 =0
-# compteur_10 =0
-# compteur_11 =0
-# compteur_12 =0
-# compteur_13 =0
+# puts journalists_length.max
 
+# tab_compteur = Array.new
+# tab_compteur.push(0)
 
-puts journalists_length.max
+# print tab_compteur
 
-tab_compteur = Array.new
-tab_compteur.push(0)
+# journalists_length.each do |el|
+#     if tab_compteur.length > el
+#         tab_compteur[el] = tab_compteur[el] + 1
+#         puts ""
+#         print tab_compteur
+#     else
+#         while   tab_compteur.length <= el
+#             tab_compteur.push(0)
+#         end
+#         puts ""
+#         print tab_compteur
+#         tab_compteur[el] = tab_compteur[el] + 1
+#         puts ""
+#         print tab_compteur
+#         sleep(0.5)
+#     end
+# end
 
-print tab_compteur
+# METHODE 2
 
-journalists_length.each do |el|
-    if tab_compteur.length > el
-        tab_compteur[el] = tab_compteur[el] + 1
-        puts ""
-        print tab_compteur
-    else
-        while   tab_compteur.length <= el
-            tab_compteur.push(0)
-        end
-        puts ""
-        print tab_compteur
-        tab_compteur[el] = tab_compteur[el] + 1
-        puts ""
-        print tab_compteur
-        sleep(0.5)
-    end
+for i in 0...journalists.length
+    compteur = 0
 end
+
+
+
 
 print
 

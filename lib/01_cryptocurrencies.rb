@@ -30,18 +30,40 @@ crypto = Hash[crypto_list.zip crypto_values]
 # print crypto_values
 # print crypto
 puts
+puts "--------------------------------------------------------"
+
+puts "La crypto la plus chère est : "
+
 print crypto.max_by{|k,v| v}
 puts
+puts "--------------------------------------------------------"
+
+
+puts "La crypto la moins chère est : "
+
+ 
 print crypto.min_by{|k,v| v}
 puts
-crypto_under6k = Array.new
-puts crypto.length
+puts "--------------------------------------------------------"
+
+puts "Liste des cryptos under 6k: "
+
+
 
 choices = crypto.select { |key, value| value < 6000 }
+
 print choices
 puts
-puts choices.max_by{|k,v| v}
+puts "--------------------------------------------------------"
+puts "Il y a au total #{choices.length} cryptos sous les 6k"
 
+puts
+puts "Parmi les crypto sous les 6k, la plus haute est :"
+print choices.max_by{|k,v| v}
+
+puts
+puts
+puts
 
 # puts crypto.class
 # puts crypto.max_by{|k,v| v}.class
