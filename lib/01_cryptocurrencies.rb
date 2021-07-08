@@ -50,16 +50,16 @@ puts "Liste des cryptos under 6k: "
 
 
 
-choices = crypto.select { |key, value| value < 6000 }
+under_6k = crypto.select { |key, value| value < 6000 }
 
-print choices
+print under_6k
 puts
 puts "--------------------------------------------------------"
-puts "Il y a au total #{choices.length} cryptos sous les 6k"
+puts "Il y a au total #{under_6k.length} cryptos sous les 6k"
 
 puts
 puts "Parmi les crypto sous les 6k, la plus haute est :"
-print choices.max_by{|k,v| v}
+print under_6k.max_by{|k,v| v}
 
 puts
 puts
